@@ -1,27 +1,18 @@
-import numpy as np # Matrix Operations (Matlab of Python)
-import pandas as pd # Work with Datasources
-import matplotlib.pyplot as plt # Drawing Library
-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt 
 from PIL import Image
-
-import torch # Like a numpy but we could work with GPU by pytorch library
-import torch.nn as nn # Nural Network Implimented with pytorch
-import torchvision # A library for work with pretrained model and datasets
-
+import torch
+import torch.nn as nn
+import torchvision 
 from torchvision import transforms
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 import torch.optim as optim
-
 import glob
 import os
-
-
 from torchvision import transforms
-
-
-
 
 
 
@@ -55,9 +46,11 @@ class CatDogDataset(Dataset):
                 files.append([i, className, fileName])
         self.file_list = files
         files = None
+
         
     def __len__(self):
         return len(self.file_list)
+
 
     def __getitem__(self, idx):
         fileName = self.file_list[idx][2]

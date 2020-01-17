@@ -1,31 +1,20 @@
-
-
-import numpy as np # Matrix Operations (Matlab of Python)
-import pandas as pd # Work with Datasources
-import matplotlib.pyplot as plt # Drawing Library
-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 from PIL import Image
-
-import torch # Like a numpy but we could work with GPU by pytorch library
-import torch.nn as nn # Nural Network Implimented with pytorch
-import torchvision # A library for work with pretrained model and datasets
-
+import torch 
+import torch.nn as nn
+import torchvision 
 from torchvision import transforms
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 import torch.optim as optim
-
 import glob
 import os
 
-
 from torchvision import transforms
 
-image_size = (100, 100)
-image_row_size = image_size[0] * image_size[1]
-image_size = (100, 100)
-image_row_size = image_size[0] * image_size[1]
 
 class Classification(nn.Module):
     def __init__(self):
@@ -44,7 +33,7 @@ class Classification(nn.Module):
         x = x.view(-1,self.num_flat_features(x))
 
         x = F.relu(self.fc1(x))
-        x = self.fc2(x)
+        x = F.softmax(self.fc2(x))
 
         return x
 
