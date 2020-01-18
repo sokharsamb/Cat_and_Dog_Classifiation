@@ -1,4 +1,4 @@
-﻿Table of content 
+## Table of content 
 
 data.py: 
 
@@ -13,7 +13,7 @@ main.py:
 This file contain the step for training and testing the our model.
 
 
-﻿How to run this code
+## How to run this code
  
 Before you run this model, make sure you have all the requirement that we define in the requirement file.
 
