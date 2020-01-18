@@ -1,29 +1,19 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt 
 from PIL import Image
-import torch
-import torch.nn as nn
-import torchvision 
 from torchvision import transforms
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
-import torch.nn.functional as F
-import torch.optim as optim
 import glob
 import os
-from torchvision import transforms
 
 
-
-path    = '/home/aims/Documents/Pytorch/pytorch_exercise/data'
+path = '/home/aims/Documents/Pytorch/pytorch_exercise/data'
 
 mean = [0.485, 0.456, 0.406]
 std  = [0.229, 0.224, 0.225]
 
-image_size = (100, 100)
+image_size     = (100, 100)
 image_row_size = image_size[0] * image_size[1]
-image_size = (100, 100)
+image_size     = (100, 100)
 image_row_size = image_size[0] * image_size[1]
 
 

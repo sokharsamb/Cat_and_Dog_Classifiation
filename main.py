@@ -16,6 +16,7 @@ from model import Classification
 from data import CatDogDataset
 from torchvision import transforms
 
+
 image_size = (100, 100)
 image_row_size = image_size[0] * image_size[1]
 image_size = (100, 100)
@@ -45,9 +46,9 @@ trainloader = torch.utils.data.DataLoader(test_data, batch_size=64,
                                           shuffle=True, num_workers=4)
 testloader = torch.utils.data.DataLoader(test_data, batch_size=64,
                                          shuffle=True, num_workers=4)
+#Training
 
-
-for epoch in range(3):  # loop over the dataset multiple times
+for epoch in range(10):  # loop over the dataset multiple times
 
     running_loss = 0.0
     for i, data in enumerate(trainloader, 0):
@@ -65,10 +66,12 @@ for epoch in range(3):  # loop over the dataset multiple times
 
         # print statistics
         running_loss += loss.item()
-        if i % 100 == 0:    # print every 2000 mini-batches
+
+        if i % 100 == 0:    # print every 100 mini-batches
             print('[%d, %5d] loss: %.3f' %
-                  (epoch + 1, i + 1, running_loss))
+                  (epoch + 1, i + 1, running_loss/100))
             running_loss = 0.0
+#Testing
 
 print('Finished Training')
 
