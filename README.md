@@ -17,7 +17,7 @@ This file contain the step for training and testing the our model.
  
 Before you run this model, make sure you have all the requirements that we define in the requirement file.
 
-Download the cat and dog dataset you can found it https://www.kaggle.com/c/dogs-vs-cats.  
+Download the cat and dog dataset you can find it https://www.kaggle.com/c/dogs-vs-cats.  
 
 
 
