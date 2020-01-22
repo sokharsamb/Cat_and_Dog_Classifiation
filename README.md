@@ -28,3 +28,7 @@ Download the cat and dog dataset you can find it https://www.kaggle.com/c/dogs-v
 
 
 
+![](visualization/cat_andDog.png)
+![](visualization/Cat_and_Dog_classifier.png)
+![](visualization/lossFunction.png)
+![](visualization/prediction.png)
